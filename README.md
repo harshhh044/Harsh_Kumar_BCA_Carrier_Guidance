@@ -1,10 +1,11 @@
 # Carrier_Guidance
 A career guidance platform helping students explore fields, plan study paths, and make informed career choices easily.
 
-#📚 Project Title
+# 📚 Project Title
+
 Carrier Guidance
 
-#👥 Team Members
+# 👥 Team Members
 
 - Harsh kumar (2401201178)
 - Aryanshi singh (2401201190)
