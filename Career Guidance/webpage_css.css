@@ -1,0 +1,286 @@
+/*universal*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Main body*/
+body{
+    background-image: linear-gradient(to right,#B6B1A9,#1C3A3E);
+}
+
+/*Background video*/
+.bg-video{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+}
+.vid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9){
+    .vid{
+      width: 100%;
+      height: auto;
+      opacity: 0.3;
+    }
+  }
+  @media (max-aspect-ratio:16/9){
+    .vid{
+      width: 100%;
+      height: auto;
+      opacity: o.3;
+    }
+}
+
+/*website name*/
+.head h1{
+    padding-top: 16px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-left: 20px;
+}
+  
+/*navbar*/
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    margin-top: -30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+  
+.navbar a {
+    float: right;
+    margin-right: 10px;
+    border:2px solid white;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: white;
+    color: black;
+}
+
+/*centered text*/
+.tagline{
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    align-items: center;
+}
+.tagline h1{
+    font-size: 40px;
+    margin-top: 100px;
+}
+.tagline p{
+    align-items: center;
+}
+.tagline a{
+    border:2px solid white;
+    font-family: "Cabin", sans-serif;
+    font-size: 23px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.tagline a:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Main hover cards bacground div*/
+.box{
+    background-color: #FDFCF9;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: -160px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*hover heading*/
+.field{
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 23px;
+    padding-top: 20px;
+}
+
+/*hover cards*/
+.Len{       
+    width: 90%;
+    margin-left: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width:500px;
+    height: 250px;
+    margin:13px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.card:hover{
+    transform:translateY(-5px)
+}
+.card img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: 8px;                        
+}
+
+/*form input background*/
+.input{
+    background-color: #E1DDC6;
+    margin-top: 100px;
+    font-family: "Cabin", sans-serif;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 40px;
+}
+.input-heading{
+    padding-top: 20px;
+}
+.input-heading p{
+    margin-top: 10px;
+}
+
+/*input email*/
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-left: 400px;
+    margin-right: 400px;
+    font-family: "Cabin", sans-serif;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10x;
+    border-bottom-right-radius: 10px;
+}
+
+/*form input*/
+.email-container input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10x;
+    border-bottom-right-radius: 10px;
+}
+
+/*form input button*/
+.email-container button {
+    background-color: #0D4D66; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.email-container button:hover {
+    background-color: #0d4d66de; 
+}
+
+/*shaping card background*/
+.block{
+    background-color: #FDFCF9;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 40px;
+}
+
+/*section heading*/
+.heading{
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+}
+.heading h1{
+    padding-top: 20px;
+}
+.heading p{
+    margin-top: 19px;
+}
+
+/*whole shaping card div*/
+.shape{       
+    width: 90%;
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*card section*/
+.car{
+    margin-left:70px;
+    margin-top: 30px;
+}
+.car img{
+    height: 90px;
+    width: 90px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;                     
+}
+.car p{
+    margin-top: 10px;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/*footer*/
+.bottom{
+    background-color: #E1DDC6;
+    padding-top: 0.1px;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    padding-top: 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}

@@ -1,0 +1,171 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Buttons */
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.home-btn, .get-started {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.home-btn:hover, .get-started:hover {
+    background-color: #0056b3;
+}
+
+/* Background Video Styling */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5; /* Light background effect */
+    z-index: -1;
+}
+
+
+/* Animated Video Styling */
+.animation-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#animation-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Login Container */
+.login-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Login Box Styling (Square Shape) */
+.login-box {
+    width: 350px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.909);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #edf6f9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Individual Footer Sections */
+.footer-section {
+    width: 60%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Footer Headings */
+.footer-section h3 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Footer Text */
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer Links */
+.footer-section a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: #adb5bd;
+    padding: 10px;
+    font-size: 14px;
+    color: #000000;
+}

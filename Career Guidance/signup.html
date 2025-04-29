@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup_css.css"> <!-- Link CSS -->
+    
+    <!-- Flag & Phone Input Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+<body>
+
+    <!-- Animated Background Video -->
+    <video autoplay loop muted id="bg-video">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Sign-up Form Container -->
+    <div class="signup-container">
+        <h2>Sign up to Code Spark</h2> <!-- Main Heading -->
+
+        <form>
+            <!-- Full Name Field -->
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" placeholder="Enter full name" required>
+
+            <!-- Email Address Field -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter email address" oninput="showPasswordField()">
+
+            <!-- OR Divider -->
+            <div class="or-divider">OR</div>
+
+            <!-- Phone Number Field with Country Code -->
+            <label for="phone">Phone Number</label>
+            <div class="phone-container">
+                <input type="tel" id="phone" placeholder="Enter phone number">
+            </div>
+            <br>
+
+            <!-- Error Message (Hidden by Default) -->
+            <p class="error-message" id="phone-error" style="display: none;">Invalid Phone Number</p>
+
+            <!-- Password Field (Hidden Initially) -->
+            <div id="password-field" style="display: none;">
+                <label for="password">Create Password</label>
+                <input type="password" id="password" placeholder="Create Password">
+            </div>
+
+            <!-- Continue Button -->
+            <button type="submit">Continue</button>
+        </form>
+
+        <!-- Sign-in Option -->
+        <p class="signin-option">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <!-- Sample Animated Video Section -->
+    <div class="animation-container">
+        <video autoplay loop muted id="animation-video">
+            <source src="https://www.videezy.com/download/1059782" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- JavaScript for Phone Validation & Flag Integration -->
+    <script>
+        var phoneInput = document.querySelector("#phone");
+        var iti = window.intlTelInput(phoneInput, {
+            initialCountry: "in", // Default country (India)
+            separateDialCode: true, // Show dial code separately
+            preferredCountries: ["in", "us", "gb", "au", "jp"], // Preferred list
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // Load utility script
+        });
+
+        function showPasswordField() {
+            var emailInput = document.getElementById("email").value;
+            var phoneInput = document.getElementById("phone").value;
+            var passwordField = document.getElementById("password-field");
+
+            // Show password field if email or valid phone is entered
+            if (emailInput || iti.isValidNumber()) {
+                passwordField.style.display = "block";
+            } else {
+                passwordField.style.display = "none";
+            }
+        }
+
+        phoneInput.addEventListener("input", function() {
+            validatePhone();
+            showPasswordField();
+        });
+
+        function validatePhone() {
+            var phoneError = document.getElementById("phone-error");
+
+            // Check if phone number is valid
+            if (!iti.isValidNumber() && phoneInput.value.length > 0) {
+                phoneError.style.display = "block";
+            } else {
+                phoneError.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

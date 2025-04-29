@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Development Roadmap</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #FFD700;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    }
+
+    .section {
+      margin: 25px 0;
+      padding: 20px;
+      border-left: 5px solid #FFD700;
+      background: rgba(0,0,0,0.3);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .section h3 {
+      color: #00FFFF;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .toggle-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #FFD700;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background: #ffcc00;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .highlight {
+      color: #90ee90;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>Software Development + Full Stack Roadmap</header>
+
+<div class="container">
+
+  <h2>Learning Roadmap</h2>
+
+  <!-- SOFTWARE DEVELOPMENT -->
+  <div class="section">
+    <h3>💻 What is Software Development?</h3>
+    <p>Software development is the process of designing, programming, testing, and maintaining software applications. It includes web apps, desktop software, mobile apps, embedded systems, and more.</p>
+  </div>
+
+  <div class="section">
+    <h3>📌 Importance & Usage</h3>
+    <p>Software powers everything around us — from e-commerce to space rockets. It's used in banking, healthcare, education, entertainment, AI, and literally every industry.</p>
+  </div>
+
+  <div class="section">
+    <h3>🛠️ Fields in Software Development</h3>
+    <ul>
+      <li>🔹 Web Development (Frontend + Backend)</li>
+      <li>🔹 Mobile App Development</li>
+      <li>🔹 Desktop Software</li>
+      <li>🔹 Game Development</li>
+      <li>🔹 DevOps & Cloud</li>
+      <li>🔹 Data Engineering</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>💼 Job Profiles</h3>
+    <ul>
+      <li>✅ Software Developer</li>
+      <li>✅ Web Developer</li>
+      <li>✅ Backend Engineer</li>
+      <li>✅ Mobile App Developer</li>
+      <li>✅ DevOps Engineer</li>
+      <li>✅ Game Developer</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>💰 Salary & Scope</h3>
+    <p><strong>India:</strong> ₹5L–₹35L per annum</p>
+    <p><strong>US:</strong> $80K–$200K annually</p>
+    <p>There's exponential growth in tech — making software development a <span class="highlight">high-demand, high-paying</span> career choice worldwide.</p>
+  </div>
+
+  <!-- FULL STACK DEVELOPMENT -->
+  <div class="section">
+    <h3>🌐 Specialization: Full Stack Developer</h3>
+    <p>A Full Stack Developer handles both the <span class="highlight">frontend</span> and <span class="highlight">backend</span> of websites or apps. This role gives you end-to-end control of an application.</p>
+  </div>
+
+  <div class="section">
+    <h3>🧠 Skills Required</h3>
+    <p><strong>Frontend:</strong> HTML, CSS, JS, React, Tailwind</p>
+    <p><strong>Backend:</strong> Node.js, Express.js, MongoDB, MySQL</p>
+    <p><strong>Dev Tools:</strong> Git/GitHub, Hosting, APIs</p>
+  </div>
+
+  <div class="section">
+    <h3>🛣️ How to Learn – Step by Step</h3>
+    <span class="toggle-btn" onclick="toggleContent('fullstack')">Show Roadmap</span>
+    <div id="fullstack" class="hidden">
+      <ul>
+        <li>1️⃣ Start with HTML, CSS, JavaScript</li>
+        <li>2️⃣ Learn responsive design (Bootstrap, Tailwind)</li>
+        <li>3️⃣ Master JS and a framework like React</li>
+        <li>4️⃣ Backend: Node.js, Express.js</li>
+        <li>5️⃣ Database: MongoDB / MySQL</li>
+        <li>6️⃣ REST API, CRUD Operations</li>
+        <li>7️⃣ Authentication: JWT, OAuth</li>
+        <li>8️⃣ Hosting: Netlify, Vercel, Render</li>
+        <li>9️⃣ Version Control: Git/GitHub</li>
+        <li>🔟 Build Projects: Todo App, Auth App, Blog, E-Commerce, Chat</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>💼 Job Roles After Mastery</h3>
+    <ul>
+      <li>✅ Full Stack Developer</li>
+      <li>✅ MERN Stack Developer</li>
+      <li>✅ Software Engineer</li>
+      <li>✅ Freelance Web Developer</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>📚 Learning Resources</h3>
+    <ul>
+      <li>🔗 freeCodeCamp (Frontend + Backend)</li>
+      <li>🔗 The Odin Project</li>
+      <li>🔗 JavaScript.info</li>
+      <li>🔗 Roadmap.sh (Full Stack Path)</li>
+      <li>🔗 YouTube Channels: CodeWithHarry, Traversy Media</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Made with ❤️ by You | © 2025 All Rights Reserved
+</footer>
+
+<script>
+  function toggleContent(id) {
+    const content = document.getElementById(id);
+    content.classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roadmap Page</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.4s ease;
+    }
+
+    .navbar ul li a:hover {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      color: black;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+      transform: scale(1.05);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      position: relative;
+    }
+
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .hero-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+    }
+
+    /* Roadmap Section */
+    .roadmap-section {
+      padding: 5rem 2rem;
+    }
+
+    .roadmap-header-box {
+      background: linear-gradient(to right, #0084ff, #2c845e);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 3rem;
+      transition: transform 0.4s ease;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    .roadmap-header-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+
+    .roadmap-header-box h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      padding: 4rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.7s, box-shadow 0.6s;
+    }
+
+    .card:nth-child(2) { background: linear-gradient(135deg, #026b72, #095cea); }
+    .card:nth-child(3) { background: linear-gradient(135deg, #5a1f8f, #e8ff68); }
+    .card:nth-child(4) { background: linear-gradient(135deg, #e96443, #904e95); }
+    .card:nth-child(5) { background: linear-gradient(135deg, #2980b9, #ffbe5d); }
+    .card:nth-child(6) { background: linear-gradient(135deg, #6b010f, #38ef7d); }
+    .card:nth-child(7) { background: linear-gradient(135deg, #6075e7, #a0f1bf); }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    }
+
+    .card img {
+      width: 400px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: linear-gradient(to right, #690707, rgb(88, 124, 255));
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #a5ff9b, rgb(29, 211, 9));
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #111;
+      padding: 3rem 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 5rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Code Spark</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#roadmaps">Roadmaps</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <video autoplay muted loop id="bgVideo">
+    <source src="video12.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1>Build. Learn. Grow.</h1>
+    <p>Unlock your tech journey step-by-step.</p>
+  </div>
+</section>
+
+<!-- Roadmap Section -->
+<section class="roadmap-section" id="roadmaps">
+  <div class="roadmap-header-box" data-aos="fade-down" data-aos-delay="200">
+    <h2>Learning Roadmaps</h2>
+    <p>Choose your path and dive into learning!</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <img src="software.png" alt="Software Development Roadmap">
+    <div class="card-content">
+      <h3>Software Development</h3>
+      <p>HTML, CSS, JavaScript, React</p>
+      <a href="software.html" class="btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <img src="data.jpg" alt="Data Science and AI/ML Roadmap">
+    <div class="card-content">
+      <h3>Data Science and AI/ML</h3>
+      <p>Python, Pandas, Scikit-Learn</p>
+      <a href="data.html" class="btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <img src="uiux.png" alt="UI and UX Design Roadmap">
+    <div class="card-content">
+      <h3>UI & UX</h3>
+      <p>Design Thinking, Figma, Adobe XD</p>
+      <a href="ui ux .html" class="btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <img src="cyber_2.jpg" alt="Cybersecurity Roadmap">
+    <div class="card-content">
+      <h3>Cybersecurity</h3>
+      <p>Linux, Networking, Ethical Hacking</p>
+      <a href="cybersecurity.html" class="btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <img src="block.jpg" alt="Cloud and Blockchain Roadmap">
+    <div class="card-content">
+      <h3>Cloud & Blockchain</h3>
+      <p>CI/CD, AWS, Smart Contracts, Web3</p>
+      <a href="blockchain.html" class="btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="700">
+    <img src="ai_4.jpg" alt="Networking and IoT Roadmap">
+    <div class="card-content">
+      <h3>Networking & IoT</h3>
+      <p>Linux, Networking, Computer Applications</p>
+      <a href="networking.html" class="btn">Explore</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <p>Built with ❤️ by Code Spark Team</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>
